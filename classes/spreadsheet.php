@@ -160,6 +160,7 @@ class Spreadsheet
 		}
 		
 		$writer->save('php://output');
+		exit;
 	}
 	
 }
