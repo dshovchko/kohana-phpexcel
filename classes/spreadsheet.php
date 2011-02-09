@@ -10,11 +10,17 @@ class Spreadsheet
 {
 	private $_spreadsheet;
 	private $exts = array(
-		'CSV' => 'csv',
-		'PDF' => 'pdf',
-		'Excel5' => 'xls',
+		'CSV'		=> 'csv',
+		'PDF'		=> 'pdf',
+		'Excel5' 	=> 'xls',
 		'Excel2007' => 'xlsx',
-		);
+	);
+	private $mimes = array(
+        'CSV' 		=> 'text/csv',
+        'PDF' 		=> 'application/pdf',
+        'Excel5' 	=> 'application/vnd.ms-excel',
+        'Excel2007' => 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+    );
 
 	/**
 	 * Creates the spreadsheet with given or default settings
@@ -145,8 +151,7 @@ class Spreadsheet
 		$writer = PHPExcel_IOFactory::createWriter($this->_spreadsheet, $settings['format']);
 		
 		$ext = $this->exts[$settings['format']];
-		$mimes = Kohana::config('mimes');
-		$mime = $mimes[$ext][1];
+		$mime = $this->mimes[$settings['format']];
 		
 		$request = Request::instance();
 		$request->headers['Content-Type'] = $mime;
