@@ -1,4 +1,4 @@
-# PHPExcel
+# phpexcel
 
 *PHPExcel module for Kohana 3.0.x*
 
