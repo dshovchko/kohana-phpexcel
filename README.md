@@ -1,9 +1,9 @@
 # phpexcel
 
-*PHPExcel module for Kohana 3.0.x*
+*PHPExcel module for Kohana 3.3.x*
 
 - **Module URL:** <http://github.com/dshovchko/kohana-phpexcel>
-- **Compatible Kohana Version(s):** 3.0.x
+- **Compatible Kohana Version(s):** 3.3.x
 
 ## Description
 
